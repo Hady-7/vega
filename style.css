@@ -1,0 +1,314 @@
+@import url("https://fonts.googleapis.com/css2?family=Dongle:wght@300&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Dongle", sans-serif;
+  font-size: 26px;
+  border: none;
+  outline: none;
+  text-decoration: none;
+}
+
+/*nav bar*/
+.navbar {
+  padding: 0.5em;
+  background-color: rgb(0, 0, 0);
+  display: flex;
+  justify-content: space-between;
+  color: rgb(255, 255, 255);
+}
+.navbar button {
+  background-color: transparent;
+  color: rgb(255, 255, 255);
+  display: flex;
+  z-index: 1;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+.avatar {
+  display: flex;
+  justify-content: space-evenly;
+  position: relative;
+}
+
+.dropdown_button {
+  color: white;
+  padding: 5px;
+  border: none;
+  cursor: pointer;
+  width: 100px;
+  margin-left: 5px;
+}
+.dropdown_button i {
+  margin-top: 5px;
+  margin-left: 5px;
+}
+.courses {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 100px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  top: 50px;
+  left: 50px;
+}
+
+.courses li {
+  color: black;
+  padding: 6px 8px;
+  text-decoration: none;
+  display: block;
+  list-style: none;
+  background-color: rgb(47, 47, 47);
+}
+
+.courses li a {
+  text-decoration: none;
+  color: white;
+  display: block;
+  padding: 5px;
+}
+
+.courses li:hover {
+  color: white;
+  background-color: rgb(224, 93, 93);
+}
+
+/*header*/
+.header {
+  padding: 0.5em;
+  border-bottom: 1px solid black;
+  display: flex;
+}
+.header i {
+  color: rgba(0, 0, 0, 0.2);
+  font-size: 20px;
+  margin-top: 15px;
+  margin-left: 10px;
+}
+.header h3 {
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+.swal-text {
+  font-size: 1rem !important;
+  font-family: Georgia, serif;
+}
+.swal-content__input {
+  font-size: 1rem !important;
+  font-family: Georgia, serif;
+}
+
+/*side bar*/
+.sidebar {
+  margin: 0;
+  padding: 0px 5px;
+  width: 300px;
+  background-color: rgb(255, 255, 255);
+  position: absolute;
+  height: 100%;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  height: 1300px;
+}
+.sidebar div{
+    text-align: center;
+    margin: 10px auto;    
+}
+.sidebar div button{
+   padding:2px 60px ;
+   border: 1px solid rgba(0, 0, 0, 0.8)  ;
+   background-color:transparent;
+   font-size: 1.2rem;
+   font-weight: 500;
+   cursor: pointer;
+}
+.sidebar div button:hover{
+    background-color: rgb(245, 245, 245);
+}
+.sidebar div button i{
+   font-size: .8rem;
+ }
+
+
+
+
+/*****layout******/
+div.content {
+    margin-left: 300px;
+    padding: 10px 16px;
+    background-color: #fff;
+  }
+.row{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+.col-6{
+    width: 48%;
+    height:40vh;
+    margin:5px;
+}
+.col-4{
+    width: 32%;
+    height: 19.5vh;
+}
+.box{
+    background-color: #fff;
+}
+.dashed{
+  border: 2px dashed rgb(221, 221, 221);
+  width: 250px;
+  height: 150px;
+  position: static;
+  top: 10%;
+  left: 5%;
+}
+.main{
+  width: 250px;
+  height: 150px;
+  position: static;
+  top: 35%;
+  left: 5%;
+  border: 2px solid rgb(182, 182, 182);
+}
+.backBtn{
+  background-color: rgb(255, 255, 255);
+  padding: 1px 10px;
+  border-radius: 5px;
+  font-size: 28px;
+  text-transform: capitalize;
+}
+.backBtn i{
+  font-size: 12px;
+}
+.finish{
+  background-color: rgb(55, 131, 230);
+  color: #fff;
+  padding: 3px 10px;
+  border-radius: 5px;
+  font-size: 28px;
+  text-transform: capitalize;
+}
+/* .activeDiv{
+  margin-top: 130%;
+} */
+.enter{
+  border: 2px solid rgb(57, 240, 253);
+}
+.cont{
+  resize: both;
+  overflow: auto;
+}
+.placeholderImg{
+  background-image: url(./assets/wrong.png);
+  background-position: center;
+  background-size: cover;
+}
+/****Geo Chart****/
+.countryGeo{
+  width: 250px;
+  border: 1px solid rgb(224, 224, 224);
+}
+.countryGeo li{
+  list-style-type: none;
+  width: 100%;
+  border-bottom: 1px solid rgb(224, 224, 224);
+}
+.country{
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 10px;
+}
+.country p{
+  color: rgb(59, 205, 250);
+  font-size: 28px;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+.country p i{
+  color: rgb(0, 0, 0);
+  font-size: 12px;
+  padding-right: 5px;
+}
+
+/**last data in side bar**/
+.table{
+  border: 1px solid rgb(224, 224, 224);
+  width: 250px;
+  margin: 0 !important;
+}
+.data{
+  list-style-type: none;
+  width: 100%;
+  border-bottom: 1px solid rgb(224, 224, 224);
+  margin: 0 !important;
+}
+.wrap{
+  display: flex;
+  justify-content: space-between;
+  margin: 0 !important;
+}
+
+.blue{
+  display: flex;
+  flex-direction: column;
+  background-color: blue;
+  padding: 0 15px;
+  margin: 0;
+}
+.green{
+    display: flex;
+    flex-direction: column;
+    background-color: green;
+    padding: 0 15px;
+    margin: 0;
+}
+.orange{
+  display: flex;
+  flex-direction: column;
+  background-color: orange;
+  padding: 0 15px;
+  margin: 0;
+}
+.sqr span{
+  color: #fff;
+}
+.data p {
+  color: rgb(59, 205, 250);
+}
+
+@media screen and (max-width: 700px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  .sidebar div {
+    float: left;
+  }
+  div.content {margin-left: 0;}
+}
+
+@media screen and (max-width: 400px) {
+  .sidebar div {
+    text-align: center;
+    float: none;
+  }
+  .dashed{
+    top: 5%;
+    left: 16%;
+  }
+  .main{
+    top: 18%;
+    left: 16%;
+  }
+ 
+}

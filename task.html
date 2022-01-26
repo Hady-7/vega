@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>task</title>
+  </head>
+  <body>
+    <div class="navbar">
+      <div>
+        <span>Dashboard</span>
+      </div>
+      <div class="avatar">
+        <img
+          src="assets/man-avatar-icon-flat-vector-19152370.jpg"
+          style="max-width: 50px; border-radius: 50%"
+          alt="placeholder"
+        />
+        <button class="dropdown_button" onclick="show_list()">
+          Name <i class="fas fa-angle-down"></i>
+        </button>
+
+        <div id="courses_id" class="courses">
+          <li><a href="">profile</a></li>
+          <li><a href="">setting</a></li>
+          <li><a href="">logout</a></li>
+        </div>
+      </div>
+    </div>
+    <section class="header">
+      <h3 id="title">Drew's Analytics Dashboard</h3>
+      <i class="fas fa-pencil-alt" onclick="edit()"></i>
+    </section>
+    <section class="body">
+      <div class="left-sidebar">
+        <div class="sidebar">
+          <div>
+            <button class="btn"><i class="fas fa-plus"></i> New widget</button>
+          </div>
+          <div class="dashed"></div>
+          <div class="container main" id="div0"  style="width: 250px; height: 160px;">
+            
+            <div
+              class="draggable"
+              draggable="true"
+              style="width: 100%; height: auto"
+            >
+              <canvas class="active-draw" id="chart"></canvas>
+            </div>
+          </div>
+          <div ><span style="color: rgb(65, 185, 255);">Active user</span></div>
+          <div>
+            <ul class="countryGeo">
+              <li>
+                <div id="regions_div" style="width: 100%; height: auto"></div>
+              </li>
+              <li class="country">
+                <p><i class="fas fa-thumbtack"></i> ru</p>
+                <span>700</span>
+              </li>
+              <li class="country">
+                <p><i class="fas fa-thumbtack"></i> france</p>
+                <span>600</span>
+              </li>
+              <li class="country">
+                <p><i class="fas fa-thumbtack"></i> canada</p>
+                <span>500</span>
+              </li>
+              <li class="country">
+                <p><i class="fas fa-thumbtack"></i> brazil</p>
+                <span>400</span>
+              </li>
+            </ul>
+            <h3>Top Active Geos</h3>
+          </div>
+          <div>
+            <ul class="table">
+            <li class="data">
+              <h1 style="text-align: left;margin-left: 5px;">Lorem ipsum dolor sit.</h1>
+              <div class="wrap">
+                <div class="blue sqr" >
+                  <span>4</span><span>data</span>
+                </div>
+                <div class="green sqr">
+                  <span>4</span><span>data</span>
+                </div>
+                <div class="orange sqr">
+                  <span>4</span><span>data</span>
+                </div>
+              </div>
+             <div class="wrap">
+              <div style="text-align: left; margin: 0 5px;">
+                <p>ABC data</p>
+                <span>Lorem, ipsum dolor.</span>
+              </div>
+              <div style="text-align: left; margin: 0 5px;">
+                <span>700</span>
+              </div>
+             </div>
+            </li>
+            <li class="data">
+              <div class="wrap">
+                <div style="text-align: left; margin: 0 5px;">
+                  <p>ABC data</p>
+                  <span>Lorem, ipsum dolor.</span>
+                </div>
+                <div style="text-align: left; margin: 0 5px;">
+                  <span>700</span>
+                </div>
+               </div>
+            </li>
+            <li class="data">
+              <div class="wrap">
+                <div style="text-align: left; margin: 0 5px;">
+                  <p>ABC data</p>
+                  <span>Lorem, ipsum dolor.</span>
+                </div>
+                <div style="text-align: left; margin: 0 5px;">
+                  <span>700</span>
+                </div>
+               </div>
+            </li>
+          </ul>
+        </div>
+        </div> 
+      </div>
+      <div class="content" style="background: rgb(226, 223, 223)">
+        <div><h2 style="margin-left: 5px;">Drag a widget into an open dashboard slot</h2></div>
+        <div class="row">
+          <div class="col-6 box container  cont" id="div1" ></div>
+          <div class="col-6 box container  cont" id="div2" ></div>
+        </div>
+        <div class="row">
+          <div
+            class="col-6"
+            style="
+              display: flex;
+              flex-direction: column;
+              justify-content: space-between;
+            "
+          >
+            <div class="row">
+              <div class="box col-4"></div>
+              <div class="box col-4"></div>
+              <div class="box col-4"></div>
+            </div>
+            <div class="row">
+              <div class="box col-4"></div>
+              <div class="box col-4"></div>
+              <div class="box col-4"></div>
+            </div>
+          </div>
+          <div class="row col-6">
+            <div class="box col-6"></div>
+            <div class="box col-6"></div>
+          </div>
+        </div>
+        <div class="row" style="justify-content: end;">
+          <div style="margin: 10px;">
+            <button class="backBtn"><i class="fas fa-chevron-left"></i> back</button>
+            <button class="finish">finish</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="drag.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script
+      type="text/javascript"
+      src="https://www.gstatic.com/charts/loader.js"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.0/dist/chart.min.js"></script>
+
+    <script>
+      function draw(){
+        var ctx = document.getElementById("chart").getContext("2d");
+      var myCharts = new Chart(ctx, {
+        type: "line",
+        data: {
+          labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+          datasets: [
+            {
+              label: "# of high",
+              data: [5, 2, 6, 12, 13, 3],
+              backgroundColor: [
+                "rgba(255, 99, 132, 0.2)",
+                "rgba(54, 162, 235, 0.2)",
+                "rgba(255, 206, 86, 0.2)",
+                "rgba(75, 192, 192, 0.2)",
+                "rgba(153, 102, 255, 0.2)",
+                "rgba(255, 159, 64, 0.2)",
+              ],
+              borderColor: [
+                "rgba(255, 99, 132, 1)",
+                "rgba(54, 162, 235, 1)",
+                "rgba(255, 206, 86, 1)",
+                "rgba(75, 192, 192, 1)",
+                "rgba(153, 102, 255, 1)",
+                "rgba(255, 159, 64, 1)",
+              ],
+              borderWidth: 4,
+            },
+            {
+              label: "# of low",
+              data: [12, 14, 4, 5, 2, 3],
+              backgroundColor: [
+                "rgba(255, 99, 132, 0.2)",
+                "rgba(54, 162, 235, 0.2)",
+                "rgba(255, 206, 86, 0.2)",
+                "rgba(75, 192, 192, 0.2)",
+                "rgba(153, 102, 255, 0.2)",
+                "rgba(255, 159, 64, 0.2)",
+              ],
+              borderColor: [
+                "rgba(255, 99, 132, 1)",
+                "rgba(54, 162, 235, 1)",
+                "rgba(75, 192, 192, 1)",
+                "rgba(255, 206, 86, 1)",
+                "rgba(255, 159, 64, 1)",
+                "rgba(153, 102, 255, 1)",
+              ],
+              borderWidth: 4,
+            },
+          ],
+        },
+        options: {
+          scales: {
+            y: {
+              beginAtZero: true,
+            },
+          },
+        },
+      });
+      }
+      
+    </script>
+    <script>
+      function drawRegionsMap() {
+        var data = google.visualization.arrayToDataTable([
+          ["Country", "Popularity"],
+          ["Germany", 200],
+          ["United States", 300],
+          ["Brazil", 400],
+          ["Canada", 500],
+          ["France", 600],
+          ["RU", 700],
+        ]);
+
+        var options = {};
+
+        var chart = new google.visualization.GeoChart(
+          document.getElementById("regions_div")
+        );
+
+        chart.draw(data, options);
+      }
+      google.charts.load("current", {
+        packages: ["geochart"],
+      });
+      google.charts.setOnLoadCallback(drawRegionsMap);
+    </script>
+  </body>
+</html>
